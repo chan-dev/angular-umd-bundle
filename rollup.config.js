@@ -39,7 +39,7 @@ export default [
   },
   // animations
   {
-    input: "./node_modules/@angular/animations/fesm2015/animations.mjs",
+    input: "./node_modules/@angular/animations/fesm2020/animations.mjs",
     output: {
       file: "./dist/@angular/animations/bundles/animations.umd.js",
       format: "umd",
@@ -52,7 +52,7 @@ export default [
   },
   // common
   {
-    input: "./node_modules/@angular/common/fesm2015/common.mjs",
+    input: "./node_modules/@angular/common/fesm2020/common.mjs",
     output: {
       file: "./dist/@angular/common/bundles/common.umd.js",
       format: "umd",
@@ -67,7 +67,7 @@ export default [
   },
   // common.http
   {
-    input: "./node_modules/@angular/common/fesm2015/http.mjs",
+    input: "./node_modules/@angular/common/fesm2020/http.mjs",
     output: {
       file: "./dist/@angular/common/bundles/common-http.umd.js",
       format: "umd",
@@ -85,7 +85,7 @@ export default [
   },
   // compiler
   {
-    input: "./node_modules/@angular/compiler/fesm2015/compiler.mjs",
+    input: "./node_modules/@angular/compiler/fesm2020/compiler.mjs",
     output: {
       file: "./dist/@angular/compiler/bundles/compiler.umd.js",
       format: "umd",
@@ -95,7 +95,7 @@ export default [
   },
   // core
   {
-    input: "./node_modules/@angular/core/fesm2015/core.mjs",
+    input: "./node_modules/@angular/core/fesm2020/core.mjs",
     output: {
       file: "./dist/@angular/core/bundles/core.umd.js",
       format: "umd",
@@ -111,7 +111,7 @@ export default [
   },
   // forms
   {
-    input: "./node_modules/@angular/forms/fesm2015/forms.mjs",
+    input: "./node_modules/@angular/forms/fesm2020/forms.mjs",
     output: {
       file: "./dist/@angular/forms/bundles/forms.umd.js",
       format: "umd",
@@ -129,7 +129,7 @@ export default [
   // platform-browser
   {
     input:
-      "./node_modules/@angular/platform-browser/fesm2015/platform-browser.mjs",
+      "./node_modules/@angular/platform-browser/fesm2020/platform-browser.mjs",
     output: {
       file: "./dist/@angular/platform-browser/bundles/platform-browser.umd.js",
       format: "umd",
@@ -145,7 +145,7 @@ export default [
   // platform-browser-dynamic
   {
     input:
-      "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.mjs",
+      "./node_modules/@angular/platform-browser-dynamic/fesm2020/platform-browser-dynamic.mjs",
     output: {
       file: "./dist/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js",
       format: "umd",
@@ -167,7 +167,7 @@ export default [
   },
   // router
   {
-    input: "./node_modules/@angular/router/fesm2015/router.mjs",
+    input: "./node_modules/@angular/router/fesm2020/router.mjs",
     output: {
       file: "./dist/@angular/router/bundles/router.umd.js",
       format: "umd",
@@ -181,5 +181,22 @@ export default [
       plugins,
     },
     external: ["@angular/core", "@angular/common", "rxjs", "rxjs/operators"],
-  }
+  },
+  // elements
+  {
+    input: "./node_modules/@angular/elements/fesm2020/elements.mjs",
+    output: {
+      file: "./dist/@angular/elements/bundles/elements.umd.js",
+      format: "umd",
+      name: "ng.elements",
+      globals: {
+        "@angular/core": "ng.core",
+        "@angular/common": "ng.common",
+        rxjs: "rxjs",
+        "rxjs/operators": "rxjs.operators",
+      },
+      plugins,
+    },
+    external: ["@angular/core", "@angular/common", "rxjs", "rxjs/operators"],
+  },
 ];
