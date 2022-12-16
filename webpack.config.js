@@ -16,10 +16,7 @@ module.exports = (config, options) => {
     "@angular/platform-browser": "ng.platformBrowser",
     "@angular/router": "ng.router",
     "rxjs/operators": "rxjs.operators",
-    rxjs: "rxjs",
-    "@ngrx/store": "ngrx.store",
-    "@ngrx/store-devtools": `ngrx["store-devtools"]`,
-    "highcharts-angular": `window["highcharts-angular"]`,
+    rxjs: "rxjs"
   };
   return config;
 };
